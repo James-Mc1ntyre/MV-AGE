@@ -4,6 +4,8 @@ Runnable utilities for a multi-view extension of Active Learning for Graph Embed
 
 Use this method when you want strong food-item classification performance on large datasets while keeping human labeling cost low. MV_AGE prioritizes the next most useful unlabeled item by combining model uncertainty, MAGCN embedding-space density, and Multiplex PageRank centrality across ingredient and nutrient views, so each label can improve the classifier efficiently.
 
+**MV_AGE uses the AGE active-learning scoring method, adapted for multi-view data**. The centrality term comes from Multiplex PageRank over the ingredient and nutrient graph views, and the density term comes from the network embeddings after MAGCN fuses those views.
+
 Download or clone this repository before using MV_AGE. Run the commands below from the repository root so Python can find the local `mv_age/` source folder.
 
 The prepared project is meant to be ready for food-item labeling. During labeling, each terminal round shows the next food item name and its ingredient list, then prompts for the correct class label. With the standard `food_names.csv` file, the `food_name` values are shown alongside the ingredient text so the item is easier to identify.
@@ -13,6 +15,10 @@ The labeling loop queries one item at a time, which keeps the exact single-sampl
 <img src="https://ar5iv.org/html/1705.05085/assets/x1.png" alt="AGE Figure 1: Framework of AGE" width="400">
 
 *Figure: AGE active-labeling framework from Cai, Zheng, and Chang (2017), [Active Learning for Graph Embedding](https://arxiv.org/abs/1705.05085).*
+
+<img src="https://ars.els-cdn.com/content/image/1-s2.0-S0004370222000480-gr001_lrg.jpg" alt="MAGCN Figure 1: Overall structure of MAGCN" width="500">
+
+*Figure: MAGCN multi-view attention architecture from Yao, Liang, Liang, Li, and Cao (2022), [Multi-view graph convolutional networks with attention mechanism](https://doi.org/10.1016/j.artint.2022.103708).*
 
 The workflow is a simple two-step process:
 
@@ -221,16 +227,8 @@ The bundled four-class sample example uses these branded food category groups:
 `MV_AGE` scores unlabeled food items with:
 
 - uncertainty from class-probability entropy
-- density from the MAGCN embedding space
+- density from the post-fusion MAGCN embedding space
 - centrality from Multiplex PageRank over the ingredient and nutrient graph views
-
-<img src="https://ars.els-cdn.com/content/image/1-s2.0-S0004370222000480-gr001_lrg.jpg" alt="MAGCN Figure 1: Overall structure of MAGCN" width="720">
-
-*Figure: MAGCN multi-view attention architecture from Yao, Liang, Liang, Li, and Cao (2022), [Multi-view graph convolutional networks with attention mechanism](https://doi.org/10.1016/j.artint.2022.103708).*
-
-<img src="https://journals.plos.org/plosone/article/figure/image?size=large&id=10.1371/journal.pone.0078293.g002" alt="Multiplex PageRank Figure 2: Sketch of a multiplex network" width="200">
-
-*Figure: multiplex network sketch from Halu, Mondragon, Panzarasa, and Bianconi (2013), [Multiplex PageRank](https://doi.org/10.1371/journal.pone.0078293).*
 
 The package defaults are:
 
