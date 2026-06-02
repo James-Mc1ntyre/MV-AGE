@@ -1,0 +1,12 @@
+SPDX-License-Identifier: GPL-3.0-or-later
+
+MV_AGE is distributed under the GNU General Public License,
+version 3 or later.
+
+This license choice reflects the bundled Multiplex PageRank implementation,
+which declares GPL-3.0-or-later terms in its source. See
+THIRD_PARTY_NOTICES.md for bundled third-party components and citation
+requirements.
+
+The full GPL-3.0 text is available from the Free Software Foundation:
+https://www.gnu.org/licenses/gpl-3.0.txt

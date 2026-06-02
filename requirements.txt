@@ -1,0 +1,7 @@
+numpy>=1.24,<2.0
+pandas>=2.0
+scipy>=1.10
+scikit-learn>=1.3
+sentence-transformers>=3.0
+tensorflow>=2.15,<2.16; sys_platform != "win32"
+tensorflow-intel>=2.15,<2.16; sys_platform == "win32"
