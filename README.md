@@ -4,6 +4,8 @@ Runnable utilities for a multi-view extension of Active Learning for Graph Embed
 
 Use this method when you want strong food-item classification performance on large datasets while keeping human labeling cost low. MV_AGE prioritizes the next most useful unlabeled item by combining model uncertainty, MAGCN embedding-space density, and Multiplex PageRank centrality across ingredient and nutrient views, so each label can improve the classifier efficiently.
 
+Download or clone this repository before using MV_AGE. Run the commands below from the repository root so Python can find the local `mv_age/` source folder.
+
 The prepared project is meant to be ready for food-item labeling. During labeling, each terminal round shows the next food item name and its ingredient list, then prompts for the correct class label. With the standard `food_names.csv` file, the `food_name` values are shown alongside the ingredient text so the item is easier to identify.
 
 The labeling loop queries one item at a time, which keeps the exact single-sample active-learning behavior described in the AGE paper.
