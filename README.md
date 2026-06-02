@@ -10,6 +10,10 @@ The prepared project is meant to be ready for food-item labeling. During labelin
 
 The labeling loop queries one item at a time, which keeps the exact single-sample active-learning behavior described in the AGE paper.
 
+<img src="https://ar5iv.org/html/1705.05085/assets/x1.png" alt="AGE Figure 1: Framework of AGE" width="400">
+
+*Figure: AGE active-labeling framework from Cai, Zheng, and Chang (2017), [Active Learning for Graph Embedding](https://arxiv.org/abs/1705.05085).*
+
 The workflow is a simple two-step process:
 
 1. put input CSV files in the repository's `input_data/` folder
@@ -219,6 +223,14 @@ The bundled four-class sample example uses these branded food category groups:
 - uncertainty from class-probability entropy
 - density from the MAGCN embedding space
 - centrality from Multiplex PageRank over the ingredient and nutrient graph views
+
+<img src="https://ars.els-cdn.com/content/image/1-s2.0-S0004370222000480-gr001_lrg.jpg" alt="MAGCN Figure 1: Overall structure of MAGCN" width="720">
+
+*Figure: MAGCN multi-view attention architecture from Yao, Liang, Liang, Li, and Cao (2022), [Multi-view graph convolutional networks with attention mechanism](https://doi.org/10.1016/j.artint.2022.103708).*
+
+<img src="https://journals.plos.org/plosone/article/figure/image?size=large&id=10.1371/journal.pone.0078293.g002" alt="Multiplex PageRank Figure 2: Sketch of a multiplex network" width="200">
+
+*Figure: multiplex network sketch from Halu, Mondragon, Panzarasa, and Bianconi (2013), [Multiplex PageRank](https://doi.org/10.1371/journal.pone.0078293).*
 
 The package defaults are:
 
