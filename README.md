@@ -10,6 +10,14 @@ Download or clone this repository before using MV_AGE. Run the commands below fr
 
 The prepared project is meant to be ready for food-item labeling. During labeling, each terminal round shows the next food item name and its ingredient list, then prompts for the correct class label. With the standard `food_names.csv` file, the `food_name` values are shown alongside the ingredient text so the item is easier to identify.
 
+
+The workflow is a simple two-step process:
+
+1. put input CSV files in the repository's `input_data/` folder
+2. prepare a project, then start labeling
+
+
+
 The labeling loop queries one item at a time, which keeps the exact single-sample active-learning behavior described in the AGE paper.
 
 <img src="https://ar5iv.org/html/1705.05085/assets/x1.png" alt="AGE Figure 1: Framework of AGE" width="400">
@@ -19,12 +27,6 @@ The labeling loop queries one item at a time, which keeps the exact single-sampl
 <img src="https://ars.els-cdn.com/content/image/1-s2.0-S0004370222000480-gr001_lrg.jpg" alt="MAGCN Figure 1: Overall structure of MAGCN" width="500">
 
 *Figure: MAGCN multi-view attention architecture from Yao, Liang, Liang, Li, and Cao (2022), [Multi-view graph convolutional networks with attention mechanism](https://doi.org/10.1016/j.artint.2022.103708).*
-
-The workflow is a simple two-step process:
-
-1. put input CSV files in the repository's `input_data/` folder
-2. prepare a project, then start labeling
-
 
 ## Requirements
 
