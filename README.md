@@ -1,4 +1,4 @@
-# MV_AGE
+# MV_AGE: Multi-view Active Learning for Graph Embedding
 
 Runnable utilities for a multi-view extension of Active Learning for Graph Embedding (AGE; Cai, Zheng, and Chang, 2017) using Multi-view Graph Convolutional Networks with Attention Mechanism (MAGCN; Yao, Liang, Liang, Li, and Cao, 2022) and Multiplex PageRank (Halu, Mondragon, Panzarasa, and Bianconi, 2013). See [Core References](#core-references).
 
