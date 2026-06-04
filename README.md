@@ -2,7 +2,7 @@
 
 Runnable utilities for a multi-view extension of Active Learning for Graph Embedding (AGE; Cai, Zheng, and Chang, 2017) using Multi-view Graph Convolutional Networks with Attention Mechanism (MAGCN; Yao, Liang, Liang, Li, and Cao, 2022) and Multiplex PageRank (Halu, Mondragon, Panzarasa, and Bianconi, 2013). See [Core References](#core-references).
 
-Use this method when you want strong food-item classification performance on large datasets while keeping human labeling cost low. MV_AGE prioritizes the next most useful unlabeled item by combining model uncertainty, MAGCN embedding-space density, and Multiplex PageRank centrality across ingredient and nutrient views, so each label can improve the classifier efficiently.
+Use this method when you want **strong classification performance on large datasets while keeping human labeling cost low**. MV_AGE prioritizes the next most useful unlabeled item by combining model uncertainty, MAGCN embedding-space density, and Multiplex PageRank centrality across ingredient and nutrient views, so each label can improve the classifier efficiently.
 
 **MV_AGE uses the AGE active-learning scoring method, adapted for multi-view data**. The centrality term comes from Multiplex PageRank over the ingredient and nutrient graph views, and the density term comes from the network embeddings after MAGCN fuses those views.
 
